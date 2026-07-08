@@ -4,7 +4,7 @@
 <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
 <meta http-equiv="Pragma" content="no-cache">
 <meta http-equiv="Expires" content="0">
-<meta name="version" content="v171-2026-07-08">
+<meta name="version" content="v172-2026-07-08">
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
 <meta name="mobile-web-app-capable" content="yes">
@@ -260,7 +260,7 @@ tbody tr:hover td{background:var(--bg)}
     </div>
     <!-- Waiting locos detail table -->
     <div style="margin-top:10px;background:var(--sur);border:0.5px solid var(--br);border-radius:8px;overflow:hidden">
-      <div style="padding:9px 14px;background:#FAEEDA;border-bottom:0.5px solid #EF9F27;font-size:10px;font-weight:700;color:#633806;text-transform:uppercase;letter-spacing:.05em">Locos not yet at depot — waiting to begin repair</div>
+      <div style="padding:9px 14px;background:#FAEEDA;border-bottom:0.5px solid #EF9F27;font-size:10px;font-weight:700;color:#633806;text-transform:uppercase;letter-spacing:.05em">Inbound Locos — Enroute to KDS or Awaiting Repair Authorisation</div>
       <table style="width:100%;border-collapse:collapse;font-size:12px">
         <thead><tr>
           <th style="padding:7px 10px;text-align:left;font-size:10px;color:var(--tx3);font-weight:600;text-transform:uppercase;letter-spacing:.05em;background:var(--sur2);border-bottom:1px solid var(--br)">Loco</th>
@@ -1746,21 +1746,21 @@ const WRECK_DATA=[
      {n:'Commissioning',p:0,s:'n',fin:'2026-08-01',cmt:'Sprint ADC 01-Aug'}
    ]},
   {loco:'E23019',adc:'2026-TBC',pct:25,
-   status_note:'AT KDS — MAJOR PROGRESS. 103 days / 67 days TFR. Inspection done 07-Jul. SOW finalised + quotation submitted TODAY 08-Jul-2026. First time a formal scope and cost have been submitted since the cab fire in April.',
+   status_note:'AT KDS — 103 days / 67 days TFR. Inspection DONE 07-Jul. SOW finalised. Quotation submitted to TFR 08-Jul-2026. Awaiting TFR approval to commence repairs.',
    status_class:'in_progress',mat:[],
    tasks:[
      {n:'24hr report + OB submitted',p:100,s:'c',fin:'01-04-2026',cmt:'Complete — 1 April'},
      {n:'Preliminary investigation',p:100,s:'c',fin:'21-04-2026',cmt:'Complete — report issued 21 Apr'},
      {n:'Transport to KDS',p:100,s:'c',fin:'07-07-2026',cmt:'ARRIVED KDS — 103 days after incident'},
      {n:'Incoming inspection',p:100,s:'c',fin:'07-07-2026',cmt:'DONE 07-Jul-2026'},
-     {n:'SOW finalization',p:100,s:'c',fin:'08-07-2026',cmt:'SOW FINALISED — 08-Jul-2026'},
+     {n:'SOW finalization',p:100,s:'c',fin:'08-07-2026',cmt:'SOW FINALISED — 08-Jul-2026. Scope confirmed post-inspection.'},
      {n:'Quotation to TFR',p:100,s:'c',fin:'08-07-2026',cmt:'Quotation SUBMITTED TODAY 08-Jul-2026'},
      {n:'TFR approval + repair auth.',p:0,s:'n',fin:'TBC',cmt:'Awaiting TFR approval'},
      {n:'Cab + structural repairs',p:0,s:'n',fin:'TBC',cmt:'Not commenced'},
      {n:'Commissioning',p:0,s:'n',fin:'TBC',cmt:'ADC TBC after TFR approval'}
    ]},
   {loco:'E23116',adc:'2026-08-09',pct:35,
-   status_note:'ENROUTE KDS — WTB done Ermelo 01-Jul. HVC fire damage. SOW in progress. Sprint ADC 09-Aug.',
+   status_note:'ENROUTE KDS — WTB changeout done at Ermelo 01-Jul (1 day). Now at Pyramid en route to KDS per 08-Jul stoplist. HVC fire damage. SOW being compiled. Sprint ADC 09-Aug-2026.',
    status_class:'inbound',mat:[],
    tasks:[
      {n:'WTB changeout at Ermelo',p:100,s:'c',fin:'01-07-2026',cmt:'Complete'},
@@ -1770,11 +1770,11 @@ const WRECK_DATA=[
      {n:'Commissioning',p:0,s:'n',fin:'2026-08-09',cmt:'Sprint ADC 09-Aug'}
    ]},
   {loco:'E23166',adc:'2026-TBC',pct:30,
-   status_note:'MOVING TODAY — 08-Jul stoplist: "currently at Ermelo and will be moved today 08-07 to KDS." SOW done. 53+ days stopped. C shed + vandalism repairs required.',
+   status_note:'ENROUTE KDS — Left Ermelo 08-Jul-2026. SOW done (Alstom/TE/TFR). 54 days stopped / 16 days TFR. C shed + vandalism repairs required at KDS. ADC TBC.',
    status_class:'in_progress',mat:[],
    tasks:[
      {n:'SOW compilation',p:100,s:'c',fin:'15-06-2026',cmt:'SOW done by Alstom, TE and TFR'},
-     {n:'Transport to KDS',p:90,s:'p',fin:'2026-07-08',cmt:'MOVING TODAY 08-Jul-2026 from Ermelo to KDS per stoplist.'},
+     {n:'Transport to KDS',p:90,s:'p',fin:'2026-07-08',cmt:'LEFT ERMELO 08-Jul-2026 — confirmed moving to KDS today per stoplist.'},
      {n:'C shed',p:0,s:'n',fin:'TBC',cmt:'Not commenced'},
      {n:'Vandalism repairs',p:0,s:'n',fin:'TBC',cmt:'Scope in SOW'},
      {n:'Commissioning',p:0,s:'n',fin:'TBC',cmt:'Not commenced'}
