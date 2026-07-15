@@ -4,7 +4,7 @@
 <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
 <meta http-equiv="Pragma" content="no-cache">
 <meta http-equiv="Expires" content="0">
-<meta name="version" content="v180-2026-07-15">
+<meta name="version" content="v181-2026-07-15">
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
 <meta name="mobile-web-app-capable" content="yes">
@@ -1689,14 +1689,17 @@ function renderWschedCharts(){
 
 // WRECK REPAIRS (KDS) - status 23 Jun 2026
 const WRECK_DATA=[
-  {loco:'E23097',adc:'2026-07-15',pct:97,
-   status_note:'BEZ@RBH — 956 days (stop 01-Dec-2023). Commissioning ongoing. Outstanding: transformer breather, 400V supply (depot), C shed + TM greasing, flat batteries, 3 lube sticks + holder missing.',
-   status_class:'in_progress',mat:null,
+  {loco:'E23097',adc:'2026-07-17',pct:70,
+   status_note:'BEZ@RBH — 956 days (stop 01-Dec-2023). Alstom commissioning report 15-Jul: progress at 70%. MAJOR CONCERN — converter coolant not filled after converter replacement. Only 100L arriving 16-Jul; total capacity ≈250L. Additional coolant still to be arranged. 6 active issues identified.',
+   status_class:'at_risk',mat:null,
    tasks:[
-     {n:'All repairs + quality',p:100,s:'c',fin:'15-06-2026',cmt:'Complete'},
-     {n:'Commissioning',p:85,s:'p',fin:'2026-07-15',cmt:'Ongoing. Transformer breather + 400V supply + batteries outstanding.'},
-     {n:'C shed + TM greasing',p:0,s:'n',fin:'TBC',cmt:'Post-commissioning.'},
-     {n:'Battery replacement + lube sticks',p:0,s:'n',fin:'TBC',cmt:'Flat batteries. 3 lube sticks + holder missing.'}
+     {n:'All repairs + body to bogie + quality',p:100,s:'c',fin:'15-06-2026',cmt:'Complete'},
+     {n:'Commissioning',p:70,s:'p',fin:'TBC',cmt:'Alstom report 15-Jul: 70% complete. VCU not starting (incorrect connections on Mobad — software reload required). Converter-VCU communication fault (fault finding in progress).'},
+     {n:'Converter coolant',p:10,s:'p',fin:'2026-07-17',cmt:'CRITICAL — coolant NOT filled after converter replacement. 100L arriving 16-Jul (insufficient — total capacity ≈250L). Additional coolant being arranged. This is the major issue impacting completion date.'},
+     {n:'Gearcase sight glass ×2',p:0,s:'n',fin:'2026-07-16',cmt:'Both gear case sight glasses broken. No oil in gearcases. Material delivery 16-Jul.'},
+     {n:'Ethernet switch replacement',p:0,s:'n',fin:'2026-07-16',cmt:'Switch not turning on after power connection. Material delivery 16-Jul.'},
+     {n:'BSC plug replacement',p:0,s:'n',fin:'2026-07-16',cmt:'Plug found missing during inspection. Material delivery 16-Jul.'},
+     {n:'C shed + TM greasing + batteries',p:0,s:'n',fin:'TBC',cmt:'Post-commissioning. Flat batteries to replace. 3 lube sticks + holder missing.'}
    ]},
   {loco:'E23099',adc:'2026-07-17',pct:92,
    status_note:'BEZ@ZER — 14 days. ECP commissioning DONE 06-Jul. Wheelcut done. ADC 17-Jul (46220). Transformer leaking — KDS to provide quality documents before release.',
@@ -1792,7 +1795,7 @@ function renderWreck(){
 
   // Alert banner
   h+='<div style="background:rgba(224,123,0,0.12);border-left:3px solid #E07B00;border-radius:6px;padding:8px 12px;margin-bottom:10px;font-size:12px;color:#E07B00">';
-  h+='<strong>15 Jul 2026 — KDS Report:</strong> E23116 JOINT INSPECTION today (TE+TFR+Alstom) at KDS. E23019 quotation submitted 13-Jul (107 days). E23004 ADC revised to 17-Jul — repair starting. E23099 ADC 17-Jul — transformer quality docs awaited. E23063 CRITICAL — 16 days to ADC, MRSA unchanged. E23087 NEW STOP: TM#4 cutting in section (WTB mismatch cited).';
+  h+='<strong>15 Jul 2026 — KDS Report (updated 20:14):</strong> E23097 Alstom report: 70% commissioned — MAJOR CONCERN converter coolant not filled (only 100L of 250L arriving 16-Jul). VCU not starting (software reload needed). Converter-VCU comms fault. 6 active issues. ADC at risk. E23116 joint inspection done today. E23019 quotation submitted 13-Jul. E23004 ADC 17-Jul — repair starting. E23063 CRITICAL — 16 days to ADC, MRSA unchanged.';
   h+='</div>';
 
   // ── ACTIVE LOCOS ──
