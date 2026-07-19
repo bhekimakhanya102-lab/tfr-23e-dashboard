@@ -4,7 +4,7 @@
 <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
 <meta http-equiv="Pragma" content="no-cache">
 <meta http-equiv="Expires" content="0">
-<meta name="version" content="v185-2026-07-16">
+<meta name="version" content="v186-2026-07-16">
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
 <meta name="mobile-web-app-capable" content="yes">
@@ -1437,7 +1437,7 @@ function renderWearTable(){
     </div>
     <div class="kpi" style="border-top:3px solid #E07B00">
       <div class="klbl">Monitor (&minus;2.0 to &minus;2.5mm)</div>
-      <div class="kval" style="color:#E07B00">10</div>
+      <div class="kval" style="color:#E07B00">42</div>
       <div class="ksub">locos approaching limit</div>
     </div>
     <div class="kpi" style="border-top:3px solid #B85C00">
@@ -1447,8 +1447,8 @@ function renderWearTable(){
     </div>
     <div class="kpi" style="border-top:3px solid #8B0000">
       <div class="klbl">Overdue Shed (fleet-wide)</div>
-      <div class="kval" style="color:#8B0000">22</div>
-      <div class="ksub">19 Coal Line + 3 Manganese — source: 02 Jul stoplist</div>
+      <div class="kval" style="color:#8B0000">31</div>
+      <div class="ksub">25 Coal Line + 6 Manganese — recalculated 16 Jul 2026</div>
     </div>
   </div>
 
@@ -1666,6 +1666,26 @@ function renderWschedCharts(){
       }
     }
   });}
+  // Dynamically update overdue/exceeds/monitor KPI tiles from WSCHED_DATA
+  var _ov=WSCHED_DATA.filter(function(r){return r.status==='Overdue';}).length;
+  var _d7=WSCHED_DATA.filter(function(r){return r.status==='Due7';}).length;
+  var _d30=WSCHED_DATA.filter(function(r){return r.status==='Due30';}).length;
+  var _exc=WSCHED_DATA.filter(function(r){return r.risk==='Exceeds Limit';}).length;
+  var _mon=WSCHED_DATA.filter(function(r){return r.risk==='Monitor';}).length;
+  var _coalOv=WSCHED_DATA.filter(function(r){return r.status==='Overdue'&&r.line==='Coal Line';}).length;
+  var _mangOv=WSCHED_DATA.filter(function(r){return r.status==='Overdue'&&r.line==='Manganese Line';}).length;
+  document.querySelectorAll('.kval').forEach(function(el){
+    var ksub=el.nextElementSibling;
+    if(!ksub)return;
+    var t=ksub.textContent||'';
+    if(t.indexOf('requiring wheel cut')!==-1){el.textContent=_exc;}
+    else if(t.indexOf('approaching limit')!==-1){el.textContent=_mon;}
+    else if(t.indexOf('Coal Line')!==-1&&t.indexOf('Manganese')!==-1){
+      el.textContent=_ov;
+      ksub.textContent=_coalOv+' Coal Line + '+_mangOv+' Manganese — recalculated '+new Date().toLocaleDateString('en-GB',{day:'2-digit',month:'short',year:'numeric'});
+    }
+    else if(t.indexOf('Shed Due')!==-1||t.indexOf('shed due')!==-1){el.textContent=_d7+_d30;}
+  });
   // Update chart title if showing Monitor instead of Exceeds
   var _t=document.getElementById('wsched-bar-title');
   var _s=document.getElementById('wsched-bar-sub');
