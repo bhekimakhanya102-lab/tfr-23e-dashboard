@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
 <meta http-equiv="Pragma" content="no-cache">
-<meta http-equiv="Expires" content="0">
+<meta http-equiv="Expires" content="1786484268">
 <meta name="version" content="v206-2026-08-11">
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
@@ -578,6 +578,10 @@ function show(name,btn){
   if(name==='fail') renderFail();
   if(name==='ops')  renderOps();
   if(name==='dash') renderDash();
+  if(name==='wsched'||name==='wheel') {if(typeof renderWsched==='function')renderWsched();if(typeof renderWheel==='function')renderWheel();}
+  if(name==='wreck') {if(typeof renderWreck==='function')renderWreck();}
+  if(name==='ecp')   {if(typeof renderEcp==='function')renderEcp();}
+  if(name==='acceptance') renderAcceptance();
 }
 
 window.addEventListener('load',()=>{
