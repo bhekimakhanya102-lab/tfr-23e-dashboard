@@ -1896,29 +1896,44 @@ const WRECK_DATA=[
 
 
 function renderMatTable(loco) {
-  if(!loco.mat||!loco.mat.length) return '<p style="color:#777;font-size:13px">No material data linked for this loco. Check Master.xlsx VO orders.</p>';
-  var outstanding = loco.mat.filter(function(m){return m.status==='Outstanding';});
-  var delivered   = loco.mat.filter(function(m){return m.status==='Delivered';});
-  var h = '<div style="font-size:12px;color:#555;margin-bottom:6px">'+loco.mat.length+' parts linked | <span style="color:#B71C1C;font-weight:bold">'+outstanding.length+' Outstanding</span> | <span style="color:#1B5E20">'+delivered.length+' Delivered</span></div>';
-  h += '<table style="width:100%;border-collapse:collapse;font-size:12px">';
-  h += '<tr style="background:#37474F;color:#fff"><th style="padding:4px 6px;text-align:left">TC Part No</th><th style="padding:4px 6px;text-align:left">Description</th><th style="padding:4px 6px">Purpose</th><th style="padding:4px 6px">Ordered</th><th style="padding:4px 6px">Delivered</th><th style="padding:4px 6px">Balance</th><th style="padding:4px 6px">PE</th><th style="padding:4px 6px">RCB</th><th style="padding:4px 6px">Emr</th><th style="padding:4px 6px">Status</th></tr>';
+  if(!loco.mat||!loco.mat.length) return '';
+  var out=loco.mat.filter(function(m){return m.status==='Outstanding';});
+  var del=loco.mat.filter(function(m){return m.status==='Delivered';});
+  var id='mat-'+loco.loco.replace('E','');
+  var h='<div style="margin-top:8px">';
+  // Toggle header
+  h+='<div onclick="var el=document.getElementById(''+id+'');el.style.display=el.style.display==='none'?'block':'none'" style="cursor:pointer;padding:5px 9px;background:rgba(55,71,79,0.12);border-radius:4px;border-left:3px solid #546E7A;font-size:11px;display:flex;justify-content:space-between;align-items:center">';
+  h+='<span style="font-weight:600;color:#37474F">📦 Material ('+loco.mat.length+' parts)</span>';
+  h+='<span style="font-size:10px">';
+  if(out.length) h+='<span style="color:#B71C1C;font-weight:700">'+out.length+' Outstanding</span>  ';
+  if(del.length) h+='<span style="color:#2E7D32">'+del.length+' Delivered ✓</span>';
+  h+='  <span style="color:#999">▼ Show</span></span></div>';
+  // Collapsible body
+  h+='<div id="'+id+'" style="display:none;margin-top:4px;overflow-x:auto">';
+  h+='<table style="width:100%;border-collapse:collapse;font-size:11px">';
+  h+='<tr style="background:#546E7A;color:#fff">';
+  h+='<th style="padding:3px 6px;text-align:left;white-space:nowrap">TC Part No</th>';
+  h+='<th style="padding:3px 6px;text-align:left">Description</th>';
+  h+='<th style="padding:3px 6px;text-align:center">Ordered</th>';
+  h+='<th style="padding:3px 6px;text-align:center">Delivered</th>';
+  h+='<th style="padding:3px 6px;text-align:center">Balance</th>';
+  h+='<th style="padding:3px 6px;text-align:center">RCB</th>';
+  h+='<th style="padding:3px 6px;text-align:center">Emr</th>';
+  h+='<th style="padding:3px 6px;text-align:center">Status</th></tr>';
   loco.mat.forEach(function(m){
-    var sc = m.status==='Delivered'?'#E8F5E9':'#FFF3E0';
-    var tc = m.status==='Delivered'?'#1B5E20':'#E65100';
-    h += '<tr style="background:'+sc+';border-bottom:1px solid #ddd">';
-    h += '<td style="padding:3px 6px;font-family:monospace;font-size:11px">'+m.tc+'</td>';
-    h += '<td style="padding:3px 6px">'+m.desc+'</td>';
-    h += '<td style="padding:3px 6px;font-size:11px;color:#555">'+m.purpose+'</td>';
-    h += '<td style="padding:3px 6px;text-align:center">'+m.ordered+'</td>';
-    h += '<td style="padding:3px 6px;text-align:center">'+m.deliv+'</td>';
-    h += '<td style="padding:3px 6px;text-align:center;font-weight:bold;color:'+tc+'">'+m.balance+'</td>';
-    h += '<td style="padding:3px 6px;text-align:center">'+m.pe+'</td>';
-    h += '<td style="padding:3px 6px;text-align:center">'+m.rcb+'</td>';
-    h += '<td style="padding:3px 6px;text-align:center">'+m.emr+'</td>';
-    h += '<td style="padding:3px 6px;font-weight:bold;color:'+tc+'">'+m.status+'</td>';
-    h += '</tr>';
+    var bg=m.status==='Delivered'?'#f1f8e9':'#fff3e0';
+    var sc=m.status==='Delivered'?'#2E7D32':'#E65100';
+    h+='<tr style="background:'+bg+';border-bottom:1px solid #eee">';
+    h+='<td style="padding:3px 6px;font-family:monospace;font-size:10px;white-space:nowrap">'+m.tc+'</td>';
+    h+='<td style="padding:3px 6px">'+m.desc+'</td>';
+    h+='<td style="padding:3px 6px;text-align:center">'+m.ordered+'</td>';
+    h+='<td style="padding:3px 6px;text-align:center">'+m.deliv+'</td>';
+    h+='<td style="padding:3px 6px;text-align:center;font-weight:bold;color:'+sc+'">'+m.balance+'</td>';
+    h+='<td style="padding:3px 6px;text-align:center">'+m.rcb+'</td>';
+    h+='<td style="padding:3px 6px;text-align:center">'+m.emr+'</td>';
+    h+='<td style="padding:3px 6px;font-weight:600;color:'+sc+'">'+m.status+'</td></tr>';
   });
-  h += '</table>';
+  h+='</table></div></div>';
   return h;
 }
 
@@ -2000,13 +2015,7 @@ function renderLocoCard(w,today){
   });
   var matH='';
   if(w.mat&&w.mat.length){
-    var outstanding=w.mat.filter(function(m){return m.status==='Outstanding';}).length;
-    var delivered=w.mat.filter(function(m){return m.status==='Delivered';}).length;
-    matH='<div style="margin-top:10px">';
-    matH+='<div style="font-size:11px;font-weight:700;color:#E07B00;margin-bottom:5px;padding:5px 8px;background:rgba(224,123,0,0.1);border-radius:4px;border-left:3px solid #E07B00">';
-    matH+='📦 Materials ('+w.mat.length+' parts) — <span style="color:#B71C1C">'+outstanding+' Outstanding</span> | <span style="color:#1B5E20">'+delivered+' Delivered</span></div>';
-    matH+=renderMatTable(w);
-    matH+='</div>';
+    matH=renderMatTable(w);
   }
   var statusNoteH='';
   if(w.status_note){
