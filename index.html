@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
 <meta http-equiv="Pragma" content="no-cache">
-<meta http-equiv="Expires" content="1786484268">
+<meta http-equiv="Expires" content="1786484458">
 <meta name="version" content="v206-2026-08-11">
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
@@ -1957,7 +1957,7 @@ function renderAcceptance(){
   var fSrch=document.getElementById('acc-fx')?document.getElementById('acc-fx').value.toUpperCase().trim():'';
   var d=ACCEPTANCE_DATA.filter(function(r){
     if(fLoco!=='ALL'&&r.loco!==fLoco)return false;
-    if(fStat!=='ALL'&&(r.accepted||''!==fStat))return false;
+    if(fStat!=='ALL'&&(r.accepted||'')!==fStat)return false;
     if(fSrch&&(r.tc||'').indexOf(fSrch)===-1&&(r.desc||'').toUpperCase().indexOf(fSrch)===-1)return false;
     return true;
   });
