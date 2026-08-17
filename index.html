@@ -1725,9 +1725,9 @@ const MATERIAL_DATA=[{"tc":"TC3EGK596810A2117","desc":"Holder;Nrep23E","ordered"
 
 
 const WRECK_DATA=[
-  {loco:'E23097',adc:'2026-TBC',pct:93,
-   status_note:'BEZ@RBH — 977 days (stop 01-Dec-2023). COMMISSIONING 93.5% COMPLETE. ADC TODAY 07-Aug-2026. NEW FAULTS (04-Aug): Battery charge life signal fault + TMB4 fault + 20 pipe leaks (WIP — coboda airballows). BCM key issue resolved. Static commissioning complete. Awaiting final sign-off.',
-   status_class:'critical',mat:[{tc:'TC3EH-234946R0001',desc:'Batterypack;3Eh-234946R0001,Bombardier',purpose:'Battery Pack — E23097 battery charge fault',ordered:'10',deliv:'25',balance:'-15',pe:'17',rcb:'4',emr:'4',status:'Outstanding'},{tc:'TC3EGM065000-1512',desc:'Head;3Egm065000-1512;Panto;23E',purpose:'Pantograph Head — general fleet',ordered:'100',deliv:'55',balance:'45',pe:'41',rcb:'0',emr:'14',status:'Outstanding'},{tc:'TC3EH-234182R0001',desc:'Pantoelec;3Eh-234182R0001;23E',purpose:'Pantograph — commissioning parts',ordered:'153',deliv:'94',balance:'77',pe:'52',rcb:'24',emr:'',status:'Outstanding'},{tc:'TC3EGK596810A2117',desc:'Holder;Nrep23E',purpose:'Holder NREP23E — various',ordered:'25',deliv:'25',balance:'',pe:'0',rcb:'25',emr:'0',status:'Delivered'},{tc:'TC100001105',desc:'Washerlock;Sks12,Id:12Mm,24.25Mm,Ss',purpose:'Washer Lock M12 — general fasteners',ordered:'1016',deliv:'500',balance:'516',pe:'280',rcb:'120',emr:'100',status:'Outstanding'},{tc:'TC3EGK207293F0000',desc:'Bellows;Air,T/M;23E',purpose:'Air Bellows — Coboda airballows scope',ordered:'97',deliv:'88',balance:'9',pe:'61',rcb:'14',emr:'13',status:'Outstanding'}],
+  {loco:'E23097',adc:'2026-08-31',pct:94,
+   status_note:'BEZ@RBH (977d). COMMISSIONING 94% — Dynamic test on 25KV AC IN PROGRESS. Outstanding: Static test on 3kV DC + ECP commissioning. ADC updated to 31-Aug-2026.',
+   status_class:'at_risk',mat:[{tc:'TC3EH-234946R0001',desc:'Batterypack;3Eh-234946R0001,Bombardier',purpose:'Battery Pack — E23097 battery charge fault',ordered:'10',deliv:'25',balance:'-15',pe:'17',rcb:'4',emr:'4',status:'Outstanding'},{tc:'TC3EGM065000-1512',desc:'Head;3Egm065000-1512;Panto;23E',purpose:'Pantograph Head — general fleet',ordered:'100',deliv:'55',balance:'45',pe:'41',rcb:'0',emr:'14',status:'Outstanding'},{tc:'TC3EH-234182R0001',desc:'Pantoelec;3Eh-234182R0001;23E',purpose:'Pantograph — commissioning parts',ordered:'153',deliv:'94',balance:'77',pe:'52',rcb:'24',emr:'',status:'Outstanding'},{tc:'TC3EGK596810A2117',desc:'Holder;Nrep23E',purpose:'Holder NREP23E — various',ordered:'25',deliv:'25',balance:'',pe:'0',rcb:'25',emr:'0',status:'Delivered'},{tc:'TC100001105',desc:'Washerlock;Sks12,Id:12Mm,24.25Mm,Ss',purpose:'Washer Lock M12 — general fasteners',ordered:'1016',deliv:'500',balance:'516',pe:'280',rcb:'120',emr:'100',status:'Outstanding'},{tc:'TC3EGK207293F0000',desc:'Bellows;Air,T/M;23E',purpose:'Air Bellows — Coboda airballows scope',ordered:'97',deliv:'88',balance:'9',pe:'61',rcb:'14',emr:'13',status:'Outstanding'}],
    tasks:[
      {n:'Material MRSA',p:100,s:'c',fin:'12-06-2026',cmt:'Complete'},
      {n:'Vandalism repairs',p:100,s:'c',fin:'12-09-2025',cmt:'Complete'},
@@ -1742,9 +1742,9 @@ const WRECK_DATA=[
      {n:'20 pipe leaks + Coboda airballows (NEW 04-Aug)',p:15,s:'p',fin:'TBC',cmt:'NEW additional scope — 20 pipe leaks WIP + Coboda airballows.'},
      {n:'Final commissioning sign-off + release to service',p:0,s:'p',fin:'TBC',cmt:'ADC TBC — pending fault resolution. Was 07-Aug — MISSED.'}
    ]},
-{loco:'E23099',adc:'2026-TBC',pct:40,
-   status_note:'BEZ@ERMELO ⚠️ CRITICAL FAULTS (04-Aug): Metal shavings in gear cases 4, 5, 6 — root cause investigation required. Main transformer oil leak. Wheel cut required. Transfer to Richards Bay required for test run. ADC: TBC (was 14-Aug — indefinitely delayed). Previous: C shed 100% done + static commissioning complete.',
-   status_class:'critical',mat:[{tc:'TC3EH-234999R0001',desc:'Insulatorstandoff;Roofline,Bolton;23E',purpose:'Stand-off Insulator Roof — general',ordered:'56',deliv:'',balance:'56',pe:'0',rcb:'0',emr:'0',status:'Outstanding'},{tc:'TC3EGK207293F0000',desc:'Bellows;Air,T/M;23E',purpose:'Air Bellows — Coboda scope',ordered:'97',deliv:'88',balance:'9',pe:'61',rcb:'14',emr:'13',status:'Outstanding'},{tc:'TC100001105',desc:'Washerlock;Sks12,Id:12Mm,24.25Mm,Ss',purpose:'Washer Lock M12 — fasteners',ordered:'1016',deliv:'500',balance:'516',pe:'280',rcb:'120',emr:'100',status:'Outstanding'},{tc:'TC3EGK596810A2117',desc:'Holder;Nrep23E',purpose:'Holder NREP23E — general repairs',ordered:'25',deliv:'25',balance:'',pe:'0',rcb:'25',emr:'0',status:'Delivered'}],
+{loco:'E23099',adc:'2026-09-11',pct:60,
+   status_note:'BEZ@ERMELO. NEW ADC: 11-Sep-2026. Commissioning 60% — Awaiting movement to Richards Bay depot for dynamic commissioning. C shed 100% done. All inspections complete. Gear case and TX oil leak resolved.',
+   status_class:'in_progress',mat:[{tc:'TC3EH-234999R0001',desc:'Insulatorstandoff;Roofline,Bolton;23E',purpose:'Stand-off Insulator Roof — general',ordered:'56',deliv:'',balance:'56',pe:'0',rcb:'0',emr:'0',status:'Outstanding'},{tc:'TC3EGK207293F0000',desc:'Bellows;Air,T/M;23E',purpose:'Air Bellows — Coboda scope',ordered:'97',deliv:'88',balance:'9',pe:'61',rcb:'14',emr:'13',status:'Outstanding'},{tc:'TC100001105',desc:'Washerlock;Sks12,Id:12Mm,24.25Mm,Ss',purpose:'Washer Lock M12 — fasteners',ordered:'1016',deliv:'500',balance:'516',pe:'280',rcb:'120',emr:'100',status:'Outstanding'},{tc:'TC3EGK596810A2117',desc:'Holder;Nrep23E',purpose:'Holder NREP23E — general repairs',ordered:'25',deliv:'25',balance:'',pe:'0',rcb:'25',emr:'0',status:'Delivered'}],
    tasks:[
      {n:'Material',p:100,s:'c',fin:'08-05-2026',cmt:'Complete'},
      {n:'Bogie repairs',p:100,s:'c',fin:'28-04-2026',cmt:'Complete'},
@@ -1756,8 +1756,8 @@ const WRECK_DATA=[
      {n:'Transfer to Richards Bay',p:0,s:'p',fin:'TBC',cmt:'BLOCKING — transfer required before test run. Responsible: TFR Operations'},
      {n:'Test run + final commissioning at Richards Bay',p:0,s:'p',fin:'TBC',cmt:'ADC TBC — was 14-Aug, SLIPPED due to new faults.'}
    ]},
-{loco:'E23004',adc:'2026-08-28',pct:70,
-   status_note:'AT KDS — 78 days. PPTX 27-Jul: Material 100%. Coupler welding 100%. Component assembly 90% — coupler fitted, awaiting VIT to verify measurements. Body-to-bogie planned 29-Jul→31-Jul. ADC 28-Aug.',
+{loco:'E23004',adc:'2026-09-04',pct:75,
+   status_note:'KDS — ADC SLIPPED to 04-Sep-2026 (was 28-Aug). Body-to-bogie COMPLETE (13-14 Aug). TFR Quality Inspection DONE (17-Aug TODAY). Outstanding: JC A21 Data recorder module (awaiting Alstom delivery). B shed planned 24-28 Aug. Loco test 31 Aug - 04 Sep.',
    status_class:'in_progress',mat:[{tc:'TC3EGK206649F0000',desc:'Coupling;3Egm06649F0000;Brake;23E',purpose:'Coupling Brake 23E — coupler repairs',ordered:'2',deliv:'',balance:'2',pe:'0',rcb:'0',emr:'0',status:'Outstanding'},{tc:'TC3EGK207841F0000',desc:'Hoseassy;Brakeplpe;Hose(Bp)',purpose:'Hose Assy Brakepipe — brake hoses',ordered:'8',deliv:'8',balance:'',pe:'8',rcb:'0',emr:'0',status:'Delivered'},{tc:'TC3EGK207840F0000',desc:'Hoseassy;Brakecyleq;Pipehose(Bcep)',purpose:'Hose Assy Brakecyl — brake cylinder hose',ordered:'14',deliv:'14',balance:'',pe:'14',rcb:'0',emr:'0',status:'Delivered'},{tc:'TC3EGK207839F0000',desc:'Hoseassy;Eqmainrsvr;Hose(Mre)',purpose:'Hose Assy EQ Main RSvr — MRE hose',ordered:'5',deliv:'5',balance:'',pe:'5',rcb:'0',emr:'0',status:'Delivered'},{tc:'TC100254835',desc:'Cableelfct;Pwr,4,Dia:1.5Mm2,600V;23E',purpose:'Cable Elect PWR 1.5mm² — cable replacement',ordered:'202',deliv:'',balance:'202',pe:'0',rcb:'0',emr:'0',status:'Outstanding'},{tc:'TC3EH-236405R0010',desc:'Sktelec;Mureceptacle;23E',purpose:'Skt Elec MU Receptacle — diesel MU receptacle',ordered:'2',deliv:'10',balance:'-8',pe:'10',rcb:'0',emr:'0',status:'Outstanding'},{tc:'TC3EH-236405R0011',desc:'Connectorcable;Jumperrear;23E',purpose:'Connector Cable Jumper Rear — jumper cables',ordered:'62',deliv:'10',balance:'52',pe:'10',rcb:'0',emr:'0',status:'Outstanding'},{tc:'TC3EH-236405R0022',desc:'Sktelec;Pwrdumright23E,110V,11A',purpose:'Skt Elec PWR Dum Right 23E — power dummy',ordered:'12',deliv:'8',balance:'4',pe:'8',rcb:'0',emr:'0',status:'Outstanding'},{tc:'TC100001105',desc:'Washerlock;Sks12,Id:12Mm,24.25Mm,Ss',purpose:'Washer Lock M12 — fasteners',ordered:'1016',deliv:'500',balance:'516',pe:'280',rcb:'120',emr:'100',status:'Outstanding'},{tc:'TC100001033',desc:'Nuthex;Prevaillngtorque,M12,Wd:18Mm',purpose:'Nut Hex M12 — fasteners',ordered:'700',deliv:'500',balance:'200',pe:'400',rcb:'50',emr:'50',status:'Outstanding'},{tc:'TC3EGK596483A5000',desc:'Handrail;Cabnosegrabpole,Ss;23E',purpose:'Handrail Cab Nose — cab repairs',ordered:'3',deliv:'3',balance:'',pe:'0',rcb:'0',emr:'3',status:'Delivered'},{tc:'TC3EGK206873F0000',desc:'Windowvehicle;Wlndscreen;23E',purpose:'Window Vehicle Windscreen 23E — windscreen',ordered:'8',deliv:'',balance:'8',pe:'0',rcb:'0',emr:'0',status:'Outstanding'}],
    tasks:[
      {n:'Material',p:100,s:'c',fin:'21-07-2026',cmt:'Complete'},
@@ -1768,8 +1768,8 @@ const WRECK_DATA=[
      {n:'C shed',p:0,s:'n',fin:'2026-08-21',cmt:'Not commenced. Planned 17-Aug→21-Aug.'},
      {n:'Loco test',p:0,s:'n',fin:'2026-08-28',cmt:'Not commenced. ADC 28-Aug-2026.'}
    ]},
-  {loco:'E23063',adc:'2026-10-02',pct:30,
-   status_note:'ADC 02-Oct-2026. MRSA 40% — LV cubicle + ASD cubicle ETA 31-Jul. Air bellows, emergency valve, earth return cables, track magnet, walkway handrails, windows: NO STOCK. Bogie 98% (awaiting earth return cables).',
+  {loco:'E23063',adc:'2026-10-02',pct:35,
+   status_note:'KDS Wreck Repair — ADC 02-Oct-2026. Car body structural 100%. Material 40% outstanding: LV cubicle (delivery 28-Aug), air bellows x6, earth return cables x6 (no stock), handrails x2 (no stock), BP isolation cock x2 (no stock), front door window (no stock). Bogie repairs 98% — awaiting earth return cables. Components assembly 10% started.',
    status_class:'at_risk',
    mat:['Low voltage cubicle ×1 — ETA 31-Jul-2026','ASD cubicle ×1 — ETA 31-Jul-2026',
         'Air bellows ×6 — NO STOCK (TFR project office VO update needed)',
@@ -1789,8 +1789,8 @@ const WRECK_DATA=[
      {n:'C shed',p:0,s:'n',fin:'25-09-2026',cmt:'Not commenced. Planned 21-Sep→25-Sep.'},
      {n:'Commissioning',p:0,s:'n',fin:'02-10-2026',cmt:'Not commenced. ADC 02-Oct-2026.'}
    ]},
-  {loco:'E23059',adc:'2026-11-06',pct:26,
-   status_note:'ADC 06-Nov-2026. MRSA 14% — 11 items outstanding. Bogies 70% (Alstom — awaiting delivery date). Components assembly 20%.',
+  {loco:'E23059',adc:'2026-11-06',pct:20,
+   status_note:'KDS Wreck Repair — ADC 06-Nov-2026. Car body structural 100%. Material MRSA 14%: bogies x2, power converter cubicle, HV cubicle, brake resistor blowers x2, roof busbars x14, pantos x2, WTB cables x2 outstanding. Bogie 70% — awaiting Alstom. Components 20% — awaiting material.',
    status_class:'at_risk',
    mat:['Brake resistor blower tower ×2 (TFR project office to update delivery date)',
         'Power converter cubicle ×1 (TFR project office to update delivery date)',
@@ -1810,7 +1810,7 @@ const WRECK_DATA=[
      {n:'Commissioning',p:0,s:'n',fin:'06-11-2026',cmt:'ADC 06-Nov-2026'}
    ]},
   {loco:'E23062',adc:'2026-12-11',pct:10,
-   status_note:'ADC 11-Dec-2026. MRSA 0% — all outstanding. Component assembly 10% (awaiting material). Bogies from TE Durban. C shed + all tests in Ermelo depot.',
+   status_note:'KDS Wreck Repair — ADC 11-Dec-2026. Car body structural 100%. Material MRSA 0% — FULLY OUTSTANDING: roof equipment, HV cubicle, power converter cubicle, bogies (from Durban). Component assembly 10%. C shed and commissioning to be done at Ermelo depot.',
    status_class:'at_risk',
    mat:['Roof equipment (pantos, roof switches, busbars, insulators) — TE to request',
         'Jumper cables, flexible air pipes, mirrors, front window — TE to request',
@@ -1827,8 +1827,8 @@ const WRECK_DATA=[
      {n:'C shed',p:0,s:'n',fin:'04-12-2026',cmt:'In Ermelo depot'},
      {n:'Commissioning',p:0,s:'n',fin:'11-12-2026',cmt:'All tests in Ermelo depot. ADC 11-Dec-2026.'}
    ]},
-  {loco:'E23066',adc:'2027-01-29',pct:13,
-   status_note:'ADC 29-Jan-2027. MRSA 0% — all outstanding. Car body 100% complete. All other tasks not commenced. Bogies from TE Durban.',
+  {loco:'E23066',adc:'2027-01-29',pct:5,
+   status_note:'KDS Wreck Repair — ADC 29-Jan-2027. Car body structural 100%. Material MRSA 0% — FULLY OUTSTANDING: pantos, insulators, HV cubicle, power converter cubicle, TM blowers x6, brake resistor blowers x2, cooling tower blowers x2, air bellows x6. Bogies awaited from Durban. All tasks not commenced.',
    status_class:'at_risk',
    mat:['Roof equipment (pantos, insulators, roof switches)','Jumper cables',
         'Air bellows, steel air pipes','High voltage cubicle','Power converter cubicle',
