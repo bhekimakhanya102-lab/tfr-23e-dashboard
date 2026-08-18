@@ -1880,24 +1880,26 @@ const WRECK_DATA=[
    status_note:'BEZ Swartkops — 1,058+ days. PRE-ASSESSMENT DONE 07-Aug-2026 at Swartkops. Brake portion failure identified — must be resolved before depot can issue YQ (Quality Inspection certificate). Awaiting brake portion repair and YQ clearance before full repair scope and TFR approval can proceed.',
    status_class:'at_risk',mat:[],
    tasks:[
-     {n:'Preliminary assessment (Swartkops)',p:0,s:'p',fin:'TBC',cmt:'Complete before movement — TFR Technical Team'},
-     {n:'Material list + procurement trigger',p:0,s:'p',fin:'TBC',cmt:'Material Team — commence on preliminary findings'},
-     {n:'Transportation to Durban (Priority 1)',p:0,s:'p',fin:'TBC',cmt:'TFR Operations Team — movement dates to be confirmed'},
-     {n:'Final inspection in Durban',p:0,s:'p',fin:'TBC',cmt:'Durban Repair Team — detailed inspection on arrival'},
-     {n:'Scope validation + workshop repairs',p:0,s:'p',fin:'TBC',cmt:'Durban repair facility — TBC capacity allocation'},
-     {n:'C shed + commissioning',p:0,s:'p',fin:'TBC',cmt:'ADC: TBC'}
+     {n:'Pre-assessment at Swartkops',p:100,s:'c',fin:'07-08-2026',cmt:'COMPLETED 07-Aug-2026 at Swartkops depot.'},
+     {n:'Brake portion repair',p:20,s:'p',fin:'TBC',cmt:'Brake portion failure found — must be resolved before YQ can be issued.'},
+     {n:'YQ (Quality Inspection)',p:0,s:'n',fin:'TBC',cmt:'Cannot be issued until brake portion resolved. Blocking.'},
+     {n:'Material list + MRSA',p:10,s:'p',fin:'TBC',cmt:'Material scope TBC after YQ clearance.'},
+     {n:'SOW + TFR approval',p:0,s:'n',fin:'TBC',cmt:'Blocked by YQ.'},
+     {n:'Transport to repair depot',p:0,s:'n',fin:'TBC',cmt:'Durban pilot — Priority 1.'},
+     {n:'Workshop + C shed + commissioning',p:0,s:'n',fin:'TBC',cmt:'ADC TBC.'}
    ]
   },
   {loco:'E23020',adc:'TBC',pct:15,
    status_note:'BEZ Swartkops — 734+ days. PRE-ASSESSMENT DONE 07-Aug-2026 at Swartkops. Vandalism inspection (24-Jun-2025) material list confirmed: brake pipe hoses, BCEP air lines, BP isolation cocks, jumper cables, wiper blades, air connections. Brake portion failure identified — blocking YQ issuance. YQ required before SOW can be submitted to TFR.',
    status_class:'at_risk',mat:[],
    tasks:[
-     {n:'Preliminary assessment (Swartkops)',p:0,s:'p',fin:'TBC',cmt:'Complete before movement — TFR Technical Team'},
-     {n:'Material list + procurement trigger',p:0,s:'p',fin:'TBC',cmt:'Quick-win candidate — limited wiring/component repairs possible'},
-     {n:'Transportation to Durban (Priority 1)',p:0,s:'p',fin:'TBC',cmt:'TFR Operations Team — movement dates to be confirmed'},
-     {n:'Final inspection in Durban',p:0,s:'p',fin:'TBC',cmt:'Durban Repair Team — confirm quick-win vs full repair scope'},
-     {n:'Workshop repairs',p:0,s:'p',fin:'TBC',cmt:'Wiring restoration + component replacement — Durban facility'},
-     {n:'C shed + commissioning',p:0,s:'p',fin:'TBC',cmt:'ADC: TBC'}
+     {n:'Vandalism inspection (material list)',p:100,s:'c',fin:'24-06-2025',cmt:'Done 24-Jun-2025. Material: brake pipe hoses, BCEP air lines, BP isolation cocks, jumper cables, wiper blades, air connections.'},
+     {n:'Pre-assessment at Swartkops',p:100,s:'c',fin:'07-08-2026',cmt:'COMPLETED 07-Aug-2026 at Swartkops depot.'},
+     {n:'Brake portion repair',p:20,s:'p',fin:'TBC',cmt:'Brake portion failure blocking YQ. In progress at Swartkops.'},
+     {n:'YQ (Quality Inspection)',p:0,s:'n',fin:'TBC',cmt:'Cannot be issued until brake portion resolved.'},
+     {n:'Material procurement (MRSA)',p:15,s:'p',fin:'TBC',cmt:'Material list submitted. Awaiting VO confirmation.'},
+     {n:'SOW + TFR approval',p:0,s:'n',fin:'TBC',cmt:'Blocked by YQ.'},
+     {n:'Workshop + C shed + commissioning',p:0,s:'n',fin:'TBC',cmt:'ADC TBC.'}
    ]
   }
 
@@ -1905,13 +1907,12 @@ const WRECK_DATA=[
    status_note:'BEZ Swartkops — 2,317+ days (BEZ since Feb-2020). SWS INSPECTION: Brake portion failure identified — must be resolved before depot can issue YQ. Extensive material list submitted (Jun-2025): ASD contactor (HE.Q22 brake resistor blower x4), bogie components (TM bellows x6, speed sensors x2, sand boxes, lube sticks, earth cables, steps), cab components (side window, vigilance button, driver desk items, cab lights, EOT remote head, footwell heater). No ADC until YQ and TFR approval obtained.',
    status_class:'at_risk',mat:null,
    tasks:[
-     {n:'Brake portion inspection (SWS)',p:50,s:'p',fin:'TBC',cmt:'Brake portion failure identified at Swartkops — blocking YQ issuance. Depot assessment in progress.'},
-     {n:'YQ (Quality Inspection) — depot clearance',p:0,s:'n',fin:'TBC',cmt:'Cannot be issued until brake portion resolved. Swartkops depot responsible.'},
-     {n:'Material procurement (MRSA)',p:5,s:'p',fin:'TBC',cmt:'Material list submitted 2025: ASD HE.Q22 contactor x4, TM bellows x6, speed sensors x2, sand boxes, lube sticks, earth cables, cab windows, vigilance button, driver desk items, cab lights.'},
-     {n:'Car body structural assessment',p:0,s:'n',fin:'TBC',cmt:'Not commenced — awaiting YQ clearance.'},
-     {n:'TFR approval to proceed',p:0,s:'n',fin:'TBC',cmt:'TFR approval required. No SOW submitted yet.'},
-     {n:'Bogie and component assembly',p:0,s:'n',fin:'TBC',cmt:'Not commenced.'},
-     {n:'Commissioning',p:0,s:'n',fin:'TBC',cmt:'ADC TBC — pending all above.'},
+     {n:'Pre-assessment at Swartkops',p:100,s:'c',fin:'07-08-2026',cmt:'COMPLETED 07-Aug-2026 at Swartkops depot.'},
+     {n:'Brake portion repair',p:20,s:'p',fin:'TBC',cmt:'Brake portion failure — blocking YQ.'},
+     {n:'YQ (Quality Inspection)',p:0,s:'n',fin:'TBC',cmt:'Cannot be issued until brake portion resolved.'},
+     {n:'Material procurement (MRSA)',p:5,s:'p',fin:'TBC',cmt:'Material 2025: ASD HE.Q22 contactor x4, TM bellows x6, speed sensors x2, sand boxes, lube sticks, earth cables, cab window, vigilance button, driver desk, cab lights.'},
+     {n:'SOW + TFR approval',p:0,s:'n',fin:'TBC',cmt:'Blocked. BEZ since Feb-2020 (2,317+ days).'},
+     {n:'Workshop + C shed + commissioning',p:0,s:'n',fin:'TBC',cmt:'ADC TBC.'}
    ]}
 ,{loco:'E23080',adc:'TBC',pct:10,
    status_note:'BEZ KDS — 494+ days (Vandalized). FULL REWIRE KIT REQUESTED by SFM 17-Aug-2026. Vandalism scope includes complete wiring harness damage requiring full rewire kit. Awaiting TE KDS to confirm material procurement timeline. No ADC set until rewire kit delivery confirmed and TFR SOW approved.',
